@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Team extends BaseEntity{
+public class Team {
 
 
     @Id @Column(name="team_id")
@@ -15,6 +15,7 @@ public class Team extends BaseEntity{
 
     @OneToMany
     @JoinColumn(name = "team_id")
+    //????? mappedBy같은데??
     private List<Member> members = new ArrayList<>();
     //ArrayList로 초기화 해주면 add할떄  null이 안뜸
 
